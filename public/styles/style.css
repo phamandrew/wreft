@@ -1,0 +1,546 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  background-color: #d3e1e8;
+  color: #000;
+  width: 100%;
+  margin: 0; }
+  body h3 {
+    font-size: 26px; }
+
+#hamburger {
+  display: none; }
+  @media (max-width: 765px) {
+    #hamburger {
+      display: block;
+      position: fixed;
+      top: 22px;
+      right: 28px;
+      font-size: 32px; } }
+
+.nav-up {
+  top: -230px; }
+
+.nav-down {
+  top: 0; }
+
+.mobile-nav-show {
+  right: 0; }
+
+.black {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  opacity: 0;
+  z-index: 10;
+  top: 0;
+  transition: all 0.2s ease-in-out; }
+
+.black-show {
+  display: block;
+  opacity: 0.8; }
+
+nav {
+  position: fixed;
+  width: 100%;
+  background-color: #f7f7f7;
+  top: -300px;
+  transition: all 0.3s ease-in-out;
+  z-index: 20; }
+  @media (max-width: 765px) {
+    nav {
+      width: 65%;
+      height: 100vh;
+      right: -500px;
+      top: 0;
+      transition: all 0.2s ease-in-out; } }
+  nav .nav-container {
+    margin: 0 auto;
+    display: flex;
+    width: 80%;
+    justify-content: space-between; }
+    @media (max-width: 915px) {
+      nav .nav-container {
+        width: 90%; } }
+    @media (max-width: 765px) {
+      nav .nav-container {
+        flex-direction: column;
+        margin-top: 33%; } }
+    nav .nav-container a {
+      text-decoration: none;
+      font-family: 'Roboto', sans-serif;
+      color: #000;
+      font-size: 18px;
+      border-bottom: 2px solid transparent;
+      padding: 8px 0; }
+      nav .nav-container a:hover {
+        border-bottom: 2px solid #000; }
+    nav .nav-container .nav-center {
+      display: flex;
+      flex-direction: column;
+      margin: 20px auto; }
+      @media (max-width: 765px) {
+        nav .nav-container .nav-center {
+          order: -1;
+          margin: 25% auto; } }
+      nav .nav-container .nav-center h2 {
+        margin: 0 auto;
+        letter-spacing: 2px; }
+        @media (max-width: 765px) {
+          nav .nav-container .nav-center h2 {
+            text-align: center; } }
+      nav .nav-container .nav-center h2:nth-child(2) {
+        font-family: 'Roboto', sans-serif;
+        letter-spacing: 3px;
+        font-size: 14px;
+        font-weight: 300; }
+        @media (max-width: 765px) {
+          nav .nav-container .nav-center h2:nth-child(2) {
+            text-align: center; } }
+    nav .nav-container .nav-left, nav .nav-container .nav-right {
+      width: 28%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      @media (max-width: 765px) {
+        nav .nav-container .nav-left, nav .nav-container .nav-right {
+          flex-direction: column;
+          width: 70%;
+          margin: 0 auto;
+          align-items: start; }
+          nav .nav-container .nav-left a, nav .nav-container .nav-right a {
+            margin-bottom: 20px; } }
+    @media (max-width: 765px) and (max-width: 765px) {
+      nav .nav-container .nav-left a, nav .nav-container .nav-right a {
+        margin-bottom: 40px;
+        font-size: 18px; } }
+
+.home p {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  line-height: 80px;
+  font-weight: 300;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  margin: 120px auto 50px auto;
+  background-color: #d3e1e8; }
+  @media (min-width: 1500px) {
+    .home p {
+      font-size: 50px;
+      line-height: 105px;
+      width: 80%; } }
+  @media (max-width: 420px) {
+    .home p {
+      margin: 50px auto 60px auto;
+      font-size: 32px;
+      line-height: 58px; } }
+.home a {
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  color: #000;
+  font-size: 18px;
+  width: 250px;
+  margin: 0 auto; }
+  .home a img {
+    width: 150px;
+    margin-top: 20px;
+    margin-bottom: 32px; }
+
+.main-carousel {
+  background-color: #d8ecda;
+  padding: 80px 0; }
+  .main-carousel .carousel-cell {
+    width: 56%;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 5px;
+    counter-increment: carousel-cell; }
+    .main-carousel .carousel-cell img {
+      width: 100%;
+      border-radius: 5px; }
+  .main-carousel .carousel-cell:before {
+    display: block;
+    text-align: center; }
+  .main-carousel .flickity-page-dots {
+    bottom: 52px;
+    /* bottom: -25px; */
+    /* padding: 0px 0; */
+    /* margin: auto; */
+    list-style: none;
+    text-align: center;
+    background-color: #d8ecda; }
+
+.eft {
+  padding: 50px 0;
+  width: 100%;
+  margin: auto;
+  background-color: #f7f7f7; }
+  .eft .eft-container {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 70px 0; }
+    @media (max-width: 768px) {
+      .eft .eft-container {
+        width: 80%; } }
+    .eft .eft-container h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      padding-bottom: 18px;
+      text-align: center;
+      letter-spacing: 2px;
+      margin: 0; }
+    .eft .eft-container p {
+      font-family: 'Roboto', sans-serif;
+      font-size: 18px;
+      line-height: 34px;
+      text-decoration: none; }
+
+.strengths-goals {
+  padding: 70px 0;
+  background-color: #f7f3ec; }
+  .strengths-goals h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    padding-bottom: 18px;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 28px; }
+  .strengths-goals .strengths-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 42px; }
+    @media (max-width: 768px) {
+      .strengths-goals .strengths-container {
+        flex-direction: column;
+        width: 80%;
+        margin: 40px auto; } }
+    .strengths-goals .strengths-container .strengths-left {
+      width: 20%;
+      text-align: right; }
+      @media (max-width: 768px) {
+        .strengths-goals .strengths-container .strengths-left {
+          width: 100%;
+          text-align: left; } }
+      .strengths-goals .strengths-container .strengths-left h3 {
+        margin: 0 22px 22px 0;
+        font-size: 30px;
+        letter-spacing: 1px; }
+    .strengths-goals .strengths-container .strengths-middle {
+      width: 60%;
+      max-width: 750px;
+      margin: 0 auto; }
+      @media (max-width: 768px) {
+        .strengths-goals .strengths-container .strengths-middle {
+          width: 100%;
+          margin: 0 auto; } }
+      .strengths-goals .strengths-container .strengths-middle p {
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        line-height: 34px;
+        text-decoration: none;
+        margin-bottom: 24px; }
+        .strengths-goals .strengths-container .strengths-middle p:nth-child(1) {
+          margin-top: 0; }
+      .strengths-goals .strengths-container .strengths-middle ul li {
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        line-height: 34px;
+        text-decoration: none; }
+    .strengths-goals .strengths-container .strengths-right {
+      width: 20%; }
+
+.clients {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 80px 0;
+  background-color: #f7f7f7; }
+  .clients .clients-container {
+    max-width: 750px;
+    margin: 0 auto;
+    width: 80%; }
+    .clients .clients-container h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      padding-bottom: 18px;
+      text-align: center;
+      letter-spacing: 2px; }
+    .clients .clients-container p {
+      font-family: 'Roboto', sans-serif;
+      font-size: 18px;
+      line-height: 34px;
+      text-decoration: none;
+      margin-bottom: 28px;
+      text-align: center; }
+    .clients .clients-container .clients-therapists, .clients .clients-container .clients-workshops {
+      margin-bottom: 68px;
+      display: flex;
+      flex-direction: column; }
+      .clients .clients-container .clients-therapists .link, .clients .clients-container .clients-workshops .link {
+        font-family: 'Roboto', sans-serif;
+        text-decoration: none;
+        color: #333;
+        font-size: 18px;
+        padding: 12px 22px;
+        border: 2px solid #333;
+        transition: 0.2s all ease-in-out;
+        margin: 0 auto;
+        width: fit-content;
+        width: -moz-fit-content; }
+        .clients .clients-container .clients-therapists .link:hover, .clients .clients-container .clients-workshops .link:hover {
+          box-shadow: 5px 10px; }
+
+.therapists {
+  background-color: #d8ecda;
+  padding: 120px 0;
+  width: 100%; }
+  .therapists .therapists-container {
+    max-width: 750px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .therapists .therapists-container h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      padding-bottom: 18px;
+      text-align: center;
+      letter-spacing: 2px;
+      margin: 0 auto;
+      text-align: center; }
+    .therapists .therapists-container p {
+      font-family: 'Roboto', sans-serif;
+      font-size: 18px;
+      line-height: 34px;
+      text-decoration: none; }
+    .therapists .therapists-container .therapists-intro {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 36px;
+      padding-bottom: 18px;
+      text-align: center;
+      letter-spacing: 2px; }
+    .therapists .therapists-container .link {
+      font-family: 'Roboto', sans-serif;
+      text-decoration: none;
+      color: #333;
+      font-size: 18px;
+      padding: 12px 22px;
+      border: 2px solid #333;
+      transition: 0.2s all ease-in-out;
+      margin: 0 auto; }
+      .therapists .therapists-container .link:hover {
+        box-shadow: 5px 10px; }
+    .therapists .therapists-container .therapists-resources {
+      width: 280px;
+      display: flex;
+      flex-direction: column;
+      margin: 24px auto; }
+      .therapists .therapists-container .therapists-resources h3 {
+        margin: 24px auto; }
+      .therapists .therapists-container .therapists-resources a {
+        font-family: 'Roboto', sans-serif;
+        text-decoration: none;
+        color: #333;
+        font-size: 18px;
+        padding: 8px 0;
+        margin-bottom: 16px;
+        text-align: center;
+        transition: 0.2s all ease-in-out;
+        border-bottom: 2px solid transparent;
+        width: fit-content;
+        width: -moz-fit-content; }
+        .therapists .therapists-container .therapists-resources a:hover {
+          border-bottom: 2px solid #000; }
+    .therapists .therapists-container .therapists-workshops {
+      display: flex;
+      flex-direction: column;
+      margin: 24px auto;
+      width: 90%; }
+      .therapists .therapists-container .therapists-workshops h3 {
+        margin: 24px auto; }
+      .therapists .therapists-container .therapists-workshops p {
+        font-family: 'Playfair Display', serif;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 32px; }
+      .therapists .therapists-container .therapists-workshops .link {
+        font-family: 'Roboto', sans-serif;
+        text-decoration: none;
+        color: #333;
+        font-size: 18px;
+        padding: 12px 22px;
+        border: 2px solid #333;
+        transition: 0.2s all ease-in-out; }
+        .therapists .therapists-container .therapists-workshops .link:hover {
+          box-shadow: 5px 10px; }
+
+.contact {
+  padding: 70px 0;
+  background-color: #f7f3ec;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Playfair Display', serif;
+  font-size: 22px; }
+  .contact h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    padding-bottom: 18px;
+    text-align: center;
+    letter-spacing: 2px; }
+  .contact form {
+    width: 500px;
+    margin: 0 auto; }
+    @media (max-width: 520px) {
+      .contact form {
+        width: 80%; } }
+    .contact form label {
+      font-family: 'Roboto', sans-serif;
+      font-size: 18px;
+      line-height: 34px;
+      text-decoration: none; }
+    .contact form input {
+      display: block;
+      margin-bottom: 12px;
+      background-color: #f7f7f7;
+      width: 100%;
+      font-size: 16px;
+      padding: 4px;
+      border: 1px solid #000; }
+    .contact form #form-message {
+      width: 100%;
+      height: 200px;
+      display: block;
+      margin-bottom: 22px;
+      font-size: 16px;
+      border: 1px solid #000;
+      background-color: #f7f7f7; }
+    .contact form #form-submit {
+      font-size: 18px;
+      padding: 18px 22px;
+      line-height: 0;
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+      width: 30%;
+      margin: 0 auto; }
+      .contact form #form-submit:hover {
+        box-shadow: 3px 6px; }
+
+#client-workshops_page {
+  background-color: #d8ecda; }
+
+.page {
+  padding: 70px 0; }
+  .page .find-therapist_header {
+    margin-bottom: 50px; }
+    .page .find-therapist_header ul {
+      border: 2px solid black;
+      width: 80%;
+      margin: 62px auto;
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      font-size: 24px;
+      font-weight: 700;
+      padding: 12px;
+      justify-content: space-between;
+      align-items: space-between; }
+      @media (max-width: 768px) {
+        .page .find-therapist_header ul {
+          flex-direction: column;
+          width: 90%; } }
+      .page .find-therapist_header ul li {
+        padding: 28px;
+        margin: 0 auto;
+        text-align: left; }
+        .page .find-therapist_header ul li a {
+          text-decoration: none;
+          color: #000;
+          padding: 6px 0;
+          border-bottom: 2px solid transparent;
+          transition: all 0.2s ease-in-out; }
+          .page .find-therapist_header ul li a:hover {
+            border-bottom: 2px solid #000; }
+  .page .container {
+    display: flex;
+    flex-direction: column;
+    max-width: 750px;
+    margin: 0 auto;
+    width: 80%; }
+    .page .container #kitchener, .page .container #guelph, .page .container #cambridge {
+      padding-top: 110px;
+      font-size: 36px; }
+    .page .container h3 {
+      margin: 0 auto 48px auto;
+      font-size: 32px; }
+    .page .container .event {
+      border: 2px solid black;
+      padding: 18px 24px;
+      margin-bottom: 80px;
+      box-shadow: 12px 18px;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Roboto', sans-serif;
+      font-size: 18px;
+      line-height: 34px;
+      text-decoration: none; }
+      .page .container .event h3 {
+        margin: 0;
+        border-bottom: 2px solid black;
+        width: fit-content;
+        width: -moz-fit-content;
+        margin-bottom: 18px;
+        font-size: 26px; }
+      .page .container .event p {
+        margin: 0 0 14px 0; }
+        .page .container .event p span {
+          font-weight: 600;
+          color: black; }
+      .page .container .event .email-link {
+        color: black;
+        border-bottom: 2px solid transparent;
+        padding: 6px 0;
+        transition: all 0.2s ease-in-out;
+        font-weight: 600;
+        text-decoration: none;
+        width: fit-content;
+        width: -moz-fit-content; }
+        .page .container .event .email-link:hover {
+          border-bottom: 2px solid black; }
+      .page .container .event .event-links {
+        display: flex; }
+        .page .container .event .event-links a {
+          text-decoration: none;
+          color: #000;
+          border-bottom: 2px solid transparent;
+          padding-top: 6px;
+          padding-bottom: 6px;
+          transition: all 0.2s ease-in-out;
+          font-weight: 600;
+          margin-bottom: 12px;
+          line-height: 0;
+          margin-right: 42px; }
+          .page .container .event .event-links a:hover {
+            border-bottom: 2px solid #000; }
+  .page h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    padding-bottom: 18px;
+    text-align: center;
+    letter-spacing: 2px; }
+
+/*# sourceMappingURL=style.css.map */
