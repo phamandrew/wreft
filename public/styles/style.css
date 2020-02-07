@@ -498,6 +498,8 @@ nav {
       font-size: 18px;
       line-height: 34px;
       text-decoration: none; }
+      .page .container .event ul {
+        margin-top: 0; }
       .page .container .event h3 {
         margin: 0;
         border-bottom: 2px solid black;
@@ -513,7 +515,7 @@ nav {
       .page .container .event .email-link {
         color: black;
         border-bottom: 2px solid transparent;
-        padding: 6px 0;
+        margin: 6px 0;
         transition: all 0.2s ease-in-out;
         font-weight: 600;
         text-decoration: none;

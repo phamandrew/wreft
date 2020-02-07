@@ -126,7 +126,8 @@ nav {
   width: 90%;
   display: flex;
   justify-content: center;
-  margin: 120px auto 50px auto; }
+  margin: 120px auto 50px auto;
+  background-color: #d3e1e8; }
   @media (min-width: 1500px) {
     .home p {
       font-size: 50px;
@@ -155,22 +156,29 @@ nav {
     margin-top: 20px;
     margin-bottom: 32px; }
 
-.carousel-cell {
-  width: 66%;
-  height: 200px;
-  margin-right: 10px;
-  background: #8C8;
-  border-radius: 5px;
-  counter-increment: carousel-cell;
-}
-.carousel-cell:before {
-  display: block;
-  text-align: center;
-  content: counter(carousel-cell);
-  line-height: 200px;
-  font-size: 80px;
-  color: white;
-}
+.main-carousel {
+  background-color: #d8ecda;
+  padding: 80px 0; }
+  .main-carousel .carousel-cell {
+    width: 56%;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 5px;
+    counter-increment: carousel-cell; }
+    .main-carousel .carousel-cell img {
+      width: 100%;
+      border-radius: 5px; }
+  .main-carousel .carousel-cell:before {
+    display: block;
+    text-align: center; }
+  .main-carousel .flickity-page-dots {
+    bottom: 52px;
+    /* bottom: -25px; */
+    /* padding: 0px 0; */
+    /* margin: auto; */
+    list-style: none;
+    text-align: center;
+    background-color: #d8ecda; }
 
 .eft {
   padding: 50px 0;
@@ -490,6 +498,8 @@ nav {
       font-size: 18px;
       line-height: 34px;
       text-decoration: none; }
+      .page .container .event ul {
+        margin-top: 0; }
       .page .container .event h3 {
         margin: 0;
         border-bottom: 2px solid black;
@@ -505,7 +515,7 @@ nav {
       .page .container .event .email-link {
         color: black;
         border-bottom: 2px solid transparent;
-        padding: 6px 0;
+        margin: 6px 0;
         transition: all 0.2s ease-in-out;
         font-weight: 600;
         text-decoration: none;
