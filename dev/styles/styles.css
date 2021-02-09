@@ -167,7 +167,8 @@ nav {
     counter-increment: carousel-cell; }
     .main-carousel .carousel-cell img {
       width: 100%;
-      border-radius: 5px; }
+      border-radius: 5px;
+      height: 100%; }
   .main-carousel .carousel-cell:before {
     display: block;
     text-align: center; }
@@ -500,6 +501,12 @@ nav {
       text-decoration: none; }
       .page .container .event ul {
         margin-top: 0; }
+      .page .container .event table {
+        list-style: none; }
+        .page .container .event table li {
+          list-style: none;
+          display: flex;
+          flex-direction: row; }
       .page .container .event h3 {
         margin: 0;
         border-bottom: 2px solid black;

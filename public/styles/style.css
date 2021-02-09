@@ -167,7 +167,8 @@ nav {
     counter-increment: carousel-cell; }
     .main-carousel .carousel-cell img {
       width: 100%;
-      border-radius: 5px; }
+      border-radius: 5px;
+      height: 100%; }
   .main-carousel .carousel-cell:before {
     display: block;
     text-align: center; }
@@ -498,6 +499,37 @@ nav {
       font-size: 18px;
       line-height: 34px;
       text-decoration: none; }
+      .page .container .event .table {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: space-between;
+        flex-direction: column;
+        line-height: 26px; }
+        .page .container .event .table li {
+          list-style: none;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin: 0 0 16px 0; }
+          .page .container .event .table li h3 {
+            font-size: 18px; }
+          .page .container .event .table li p {
+            font-size: 16px; }
+            .page .container .event .table li p a {
+              text-decoration: underline;
+              color: black;
+              font-weight: 700; }
+          .page .container .event .table li p:nth-child(1) {
+            width: 18%; }
+          .page .container .event .table li p:nth-child(2) {
+            width: 58%; }
+          .page .container .event .table li p:nth-child(3) {
+            width: 18%; }
+      .page .container .event ul li {
+        list-style-type: decimal;
+        margin-bottom: 16px; }
       .page .container .event ul {
         margin-top: 0; }
       .page .container .event h3 {
@@ -507,6 +539,8 @@ nav {
         width: -moz-fit-content;
         margin-bottom: 18px;
         font-size: 26px; }
+      .page .container .event h4 {
+        margin-bottom: 14px; }
       .page .container .event p {
         margin: 0 0 14px 0; }
         .page .container .event p span {
